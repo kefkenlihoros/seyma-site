@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>CS Oyuncusu Şeyma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        #greeting, #result {
+            margin-top: 40px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #result img {
+            margin-top: 30px;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px #28a745;
+        }
+        #result p {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="greeting">
+        <h2>Merhabalar, dünyanın en iyi CS oyuncusunu görmek ister misiniz?</h2>
+        <button onclick="showResult()">Evet, görmek isterim</button>
+    </div>
+
+    <div id="result" style="display:none;">
+        <img src="seyma.jpg" alt="Şeyma Atılkan" />
+        <p>İşte dünyanın en iyi CS oyuncusu <br> ŞEYMA ATILKAN</p>
+    </div>
+
+    <audio id="music" src="space-song.mp3"></audio>
+
+    <script>
+        function showResult() {
+            document.getElementById('greeting').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+
+            // Müzik çal
+            var music = document.getElementById('music');
+            music.play();
+        }
+    </script>
+</body>
+</html>
